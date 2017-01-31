@@ -1,0 +1,10 @@
+Algorithm analysis: makeEmpty()
+Best case: O(1)
+Worst case: O(N)
+
+The best case scenario of the algorithm occurs when you have very few nodes. Because the algorithm will recurse and
+perform a few statement executions (not loop), the order will be the number of steps required to get there, all of which
+are constant. However, when the tree grows large enough, the order will increase. Because the number of nodes are large,
+the number of atomic steps will increase significantly, as you will have to perform all the atomic steps for each node
+and child. Since you will loop through the entire tree to delete each element, the order is therefore (in the worst case
+scenario) N.

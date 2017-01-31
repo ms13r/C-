@@ -1,0 +1,16 @@
+reverse(): Ω(n)
+Reverse is a function that also has a linear Big Omega due to the fact that it is dependent on a loop, 
+which is a while loop in this case. Due to all elements needing to be reversed, the loop must iterate a 
+total of n times, or theSize. Irregardless of object, this must be done. Though loop has additional code,
+it is mostly comprised of constants: two calls to the standard swap function as well a moving a pointer.
+Standard swap states that unless the object that is being swapped is an array, then the runtime complexity
+is always constant. Thereby, n+2 is simply Big Omega (n).
+
+remove_if(): Ω(n)
+Remove_if() utilizes an iterator object that will run through the beginning of the linked list
+all the way until the next slot after the last node within the list. In addition, it has a single
+linear check (and if statement-- negligible execution time), and a call to erase, which rearranges
+nodes and their pointers. Since every element must be searched (there are no loop breaks), by default
+the number of iterations is going to be theSize, or n. The addition of the activation record onto the
+stack when calling erase is also negligible. Overall, the algorithm amounts n+C, where C is some constant,
+which just ends up being Big Omega (n).
